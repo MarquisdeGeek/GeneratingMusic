@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOSDEM - Generating music example</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <!-- We have copied these locally because github wasn't allowing me to access them directly. Thanks CORS! -->
+  <script src="js/sml/midi.js"></script>
+  <script src="js/sml/midiinfo.js"></script>
+  <script src="js/sml/midistream.js"></script>
+  <script src="js/sml/midifile.js"></script>
+  <script src="js/sml/miditrack.js"></script>
+  
+  <script src="js/ui.js"></script>
+  
+  <script src="ex3/js/makemidi.js"></script>
+
+ <script>
+    $( function() {
+        initExample();
+    } );
+  
+  </script>
+</head>
+<body>
+
+    <div id="status">
+    </div>
+
+    <a href="#" id="btnGo">Go!</a>
+
+</body>
+</html>

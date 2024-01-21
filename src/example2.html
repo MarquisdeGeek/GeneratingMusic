@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FOSDEM - Generating music example</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="music.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+  <script src="https://cdn.rawgit.com/mohayonao/web-audio-api-shim/master/build/web-audio-api-shim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+
+  <script src="js/ui.js"></script>
+  <script src="js/audio.js"></script>
+  
+  <script src="ex2/js/remix.js"></script>
+
+ <script>
+    $( function() {
+        initExample();
+    } );
+  
+  </script>
+</head>
+<body>
+
+    <div id="status">
+    </div>
+
+    <div id="slider-container">
+    </div>
+
+    <a href="#" id="btnGo">Go!</a>
+    <a href="#" id="btnStop">Stop</a>
+
+</body>
+</html>
