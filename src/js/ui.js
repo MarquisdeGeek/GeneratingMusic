@@ -32,7 +32,7 @@ function addSlider() {
         top: "50%"
     });
 
-    $("#slider-container").append(divSlider);
+    return divSlider;
 }
 
 function addSliderHalf(value) {
@@ -57,5 +57,5 @@ function addSliderHalf(value) {
         top: "50%"
     });
 
-    $("#slider-container").append(divSlider);
+    return divSlider;
 }

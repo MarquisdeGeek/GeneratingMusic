@@ -17,7 +17,7 @@
  
   .sliderhalf {
     -webkit-appearance: none;
-    width: 40%;
+    width: 90%;
     height: 15px;
     border-radius: 5px;  
     margin-top: 10px;
@@ -61,3 +61,18 @@
     text-align: center;
     line-height: 1.6em;
   }
+  
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+.head {
+  font-weight: 700;
+  border: 1px solid #f18e8e;
+  background: #ffbfbf;
+}
+
+.cell {
+  padding: 10px;
+}

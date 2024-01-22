@@ -1,4 +1,3 @@
-let phaseSliderIdx = 0;
 let remix = [];
 
 
@@ -14,20 +13,23 @@ async function initExample() {
 }
 
 function initRemixUI() {
-    let container = $("#slider-container");
+    const headings = [ "Sample", "Start at (s)", "Loop at(s)" ];
+    const grid = $("#slider-container").css(`grid-template-columns`, `10% 45% 45%`);
+
+    headings.forEach((h) => {
+        grid.append( $("<div>").html(`${h}`).addClass("head"));
+    });
+    
+    let phaseSliderIdx = 0;
     remix.forEach((stem) => {
-        let divLabel = $("<div>").text(`Sample #${phaseSliderIdx+1} (${Math.ceil(stem.sample.duration)}s):`);
-        container.append(divLabel);
-
-        container.append($("<span>").text("Start at:"));
-        addSliderHalf(stem.firstDelay / 1000);
-
-        container.append($("<span>").text("Loop at:"));
-        addSliderHalf(stem.repeatsAfter / 1000);
+        let divLabel = $("<div>").text(`  #${phaseSliderIdx+1} (${Math.ceil(stem.sample.duration)}s):`);
+        divLabel.addClass("cell")
+        grid.append(divLabel);
+        grid.append(addSliderHalf(stem.firstDelay / 1000));
+        grid.append(addSliderHalf(stem.repeatsAfter / 1000));
 
         ++phaseSliderIdx;
     });
-
 }
 
 async function loadStems() {

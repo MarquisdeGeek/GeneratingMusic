@@ -5,10 +5,10 @@ function initExample() {
 
 function initPhaseUI() {
     $("#btnAddPhase").click(() => {
-        addSlider();
+        $("#slider-container").append(addSlider());
     });
 
-    addSlider();
+    $("#slider-container").append(addSlider());
 }
 
 function start() {
